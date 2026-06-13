@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://b0wwwib02nbby"]
+
+[sub_resource type="Gradient" id="Gradient_vef74"]
+offsets = PackedFloat32Array(0.36746988, 1)
+colors = PackedColorArray(0.22026277, 0.00048537456, 0.3695333, 1, 0.89773524, 0.08685257, 0.99999994, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hve3p"]
+gradient = SubResource("Gradient_vef74")
+width = 96
+height = 32
+fill = 1
+fill_from = Vector2(0.5, 0.3)
+fill_to = Vector2(0.49565217, 0.7717391)
+repeat = 1
+
+[sub_resource type="Gradient" id="Gradient_hve3p"]
+offsets = PackedFloat32Array(0.94578314, 1)
+colors = PackedColorArray(0.05882353, 0, 0.047058824, 0, 0.08627451, 0, 0.011764706, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mfdv2"]
+gradient = SubResource("Gradient_hve3p")
+width = 96
+height = 32
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2o6t"]
+size = Vector2(96, 32)
+
+[node name="pipe_head" type="StaticBody2D" unique_id=1371768898]
+collision_layer = 2
+
+[node name="head" type="Sprite2D" parent="." unique_id=421888280]
+texture = SubResource("GradientTexture2D_hve3p")
+
+[node name="line" type="Sprite2D" parent="head" unique_id=2105744231]
+texture = SubResource("GradientTexture2D_mfdv2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1662132569]
+shape = SubResource("RectangleShape2D_e2o6t")

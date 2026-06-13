@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://virdvbudwf1a"]
+
+[sub_resource type="Gradient" id="Gradient_eow3j"]
+offsets = PackedFloat32Array(0.24096386, 0.560241, 0.8373494, 1)
+colors = PackedColorArray(0.30889556, 0.00016198405, 0.35319236, 1, 0.56610805, 0.13159162, 0.63901365, 1, 0.637544, 0.12996599, 0.7225546, 1, 0.89712226, 0.32867077, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_j5wjh"]
+gradient = SubResource("Gradient_eow3j")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0.2)
+repeat = 1
+
+[sub_resource type="Gradient" id="Gradient_hve3p"]
+offsets = PackedFloat32Array(0.94578314, 1)
+colors = PackedColorArray(0.05882353, 0, 0.047058824, 0, 0.08627451, 0, 0.011764706, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e2o6t"]
+gradient = SubResource("Gradient_hve3p")
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_80nbo"]
+size = Vector2(64, 64)
+
+[node name="pipe_tail" type="StaticBody2D" unique_id=104061316]
+collision_layer = 2
+
+[node name="tail" type="Sprite2D" parent="." unique_id=768283974]
+texture = SubResource("GradientTexture2D_j5wjh")
+
+[node name="line" type="Sprite2D" parent="tail" unique_id=1537824766]
+texture = SubResource("GradientTexture2D_e2o6t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=663368151]
+shape = SubResource("RectangleShape2D_80nbo")
