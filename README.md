@@ -1,5 +1,6 @@
+![FlappyBird](https://github.com/ArmanKianian/Godot_FlappyBird/blob/main/FlappyBird.png)
 # Godot_FlappyBird
- A Classic Flappy Bird clone made with Godot 4. 
+ A Classic Flappy Bird clone made with Godot 4.6.
 
 ## Implemented
 - Bird
